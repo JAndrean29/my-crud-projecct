@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>My CRUD Project</title>
+</head>
+<body>
+    <div class="header-container">
+        <div class="header">
+            <h1>Baby's first CRUD Project</h1>
+            <h3 class="subtitle">Featuring HTML,CSS & JS</h3>
+            <h4 class="author">By: Joshua Andrean</h4>
+        </div>
+    </div>
+    <form class="page" action="" method="post">
+        <div class="content-container">
+            <div class="sidebar">
+                <div class="input-fields">
+                    <label for="item-name">Item Name</label>
+                    <input type="text" name="item-name" id="item-name" placeholder="Item Name"><br>
+                    <label for="item-amount">Item Amount</label>
+                    <input type="number" name="item-amount" id="item-amount" placeholder="Number"><br>
+                    <label for="item-price">Item Price</label><br>
+                    <input type="number" name="item-price" id="item-price" placeholder="Number"><br>
+                    <div id="btn-container">
+                        <button type="button" class="action-btn" id="submit-btn" onclick="addItem()">Submit</button>
+                        <button type="button" class="action-btn" id="edit-btn" onclick="editItem()">Ubah</button>
+                        <button type="button" class="action-btn" id="delete-btn" onclick="deleteItem()">Hapus</button>
+                    </div>
+                    <div class="search-container">
+                        <label for="search-query"> Search:</label><br>
+                        <input type="text" placeholder="Search Here..." id="search-query" name="search-query"><br>
+                        <button type="button" class="action-btn" id="search-btn" onclick="findItem()">Search</button>
+                        <button type="button" class="action-btn" id="reset-btn" onclick="resetSearch()">Reset</button>
+                    </div>
+                    <button type="button" class="action-btn" id="populate-btn" onClick="populateList()">Populate!</button>
+                    <button type="button" class="action-btn" id="clear-btn" onclick="clearList()">Clear</button>
+                </div>
+                <div class="delete-fields">
+                    <label for=""></label>
+                </div>
+            </div>
+        <div class="shelf">
+            <h3>List of items:</h3>
+            <ul id="item-list">
+               <div id="list-content"></div>
+            </ul>
+        <div class="page-navi">
+            <button type="button" class="action-btn disabled" id="prev-btn" onclick="prevPage(items)">Previous</button>
+            <button type="button" class="action-btn disabled" id="next-btn" onclick="nextPage(items)">Next</button>
+        </div>
+        </div>
+    </div>
+    </form>
+    <script src="find.js"></script>
+    <script src="delete.js"></script>
+    <script src="edit.js"></script>
+    <script src="initiateList.js"></script>
+    <script src="insert.js"></script>
+    <script src="displayList.js"></script>
+</body>
+</html>
