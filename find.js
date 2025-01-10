@@ -5,8 +5,9 @@ function findItem() {
     filteredList = items.filter(item => item.itemName.toLowerCase().includes(searchQuery.toLowerCase()));
     console.log(filteredList);
 
-    if (filteredList.length === 0) {
-        displayItems(myList);
+    if (searchQuery === "" || searchQuery.trim() === "") {
+        items = [...myList];
+        displayItems(items);
     } else {
         items = [...filteredList];
         displayItems(items);
@@ -15,5 +16,6 @@ function findItem() {
 
 function resetSearch() {
     currentPage = 1;
-    displayItems(myList);
+    items = [...myList];
+    displayItems(items);
 }

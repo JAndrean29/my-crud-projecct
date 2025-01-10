@@ -2,7 +2,6 @@
 function displayItems(arr) {
     const listContainer = document.getElementById("list-content");
     const pageCount = Math.ceil(arr.length/5);
-    console.log(myList);
 
     const start = (currentPage - 1) * 5;
     const end = start + 5;
