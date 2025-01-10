@@ -14,5 +14,6 @@ function findItem() {
 }
 
 function resetSearch() {
+    currentPage = 1;
     displayItems(myList);
 }
